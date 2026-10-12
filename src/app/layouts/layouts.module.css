@@ -1,0 +1,102 @@
+.shell,
+.publicShell {
+  min-height: 100vh;
+  background: var(--color-surface-muted);
+}
+.header,
+.publicHeader {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem clamp(1rem, 4vw, 3rem);
+  background: white;
+  border-bottom: 1px solid var(--color-border);
+  flex-wrap: wrap;
+}
+.brand {
+  font-weight: 800;
+  color: var(--color-brand);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.nav,
+.publicHeader nav,
+.account {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav {
+  flex: 1;
+}
+.nav a,
+.publicHeader nav a {
+  color: var(--color-ink);
+  text-decoration: none;
+}
+.nav a[aria-current='page'],
+.active {
+  font-weight: 700;
+  color: var(--color-brand) !important;
+  text-decoration: underline !important;
+  text-underline-offset: 0.35rem;
+}
+.account {
+  margin-left: auto;
+}
+.menuToggle {
+  display: none;
+}
+.main {
+  max-width: 80rem;
+  margin: auto;
+  padding: clamp(1rem, 4vw, 3rem);
+}
+.skip {
+  position: absolute;
+  left: 1rem;
+  top: -5rem;
+  background: white;
+  padding: 0.75rem;
+  z-index: 2;
+}
+.skip:focus {
+  top: 1rem;
+}
+.publicHeader {
+  justify-content: space-between;
+}
+.publicHeader nav {
+  gap: 1.25rem;
+}
+@media (max-width: 60rem) {
+  .menuToggle {
+    display: inline-flex;
+  }
+  .nav {
+    display: none;
+    order: 3;
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav.open {
+    display: flex;
+  }
+  .account {
+    margin-left: auto;
+  }
+}
+@media (max-width: 38rem) {
+  .header {
+    gap: 0.75rem;
+  }
+  .account {
+    flex-basis: 100%;
+    justify-content: space-between;
+    margin: 0;
+  }
+  .publicHeader {
+    gap: 0.75rem;
+  }
+}

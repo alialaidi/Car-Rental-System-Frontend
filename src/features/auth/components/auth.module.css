@@ -1,0 +1,60 @@
+.page {
+  align-items: center;
+  background:
+    radial-gradient(circle at 10% 10%, rgb(23 107 91 / 8%), transparent 30rem),
+    var(--color-surface-muted);
+  display: grid;
+  min-height: 100vh;
+  padding: var(--space-6);
+}
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  margin-inline: auto;
+  max-width: 34rem;
+  padding: clamp(1.5rem, 5vw, 3rem);
+  width: 100%;
+}
+.eyebrow {
+  color: var(--color-brand);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  margin: 0 0 var(--space-2);
+  text-transform: uppercase;
+}
+.title {
+  color: var(--color-ink);
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  letter-spacing: -0.04em;
+  margin: 0;
+}
+.description {
+  color: var(--color-muted);
+  line-height: 1.55;
+  margin: var(--space-2) 0 var(--space-6);
+}
+.form {
+  display: grid;
+  gap: var(--space-4);
+}
+.submit {
+  margin-top: var(--space-2);
+  width: 100%;
+}
+.pending {
+  color: var(--color-muted);
+  margin: 0;
+  text-align: center;
+}
+.switchPage {
+  color: var(--color-muted);
+  margin: var(--space-6) 0 0;
+  text-align: center;
+}
+.switchPage a {
+  color: var(--color-brand-strong);
+  font-weight: 700;
+}
